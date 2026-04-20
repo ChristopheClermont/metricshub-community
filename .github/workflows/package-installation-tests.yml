@@ -40,13 +40,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - id: debian11-amd64-deb
-            osLabel: Debian 11
-            image: debian:11
-            platform: linux/amd64
-            packageType: deb
-            packagePattern: metricshub-community_*_amd64.deb
-            arch: amd64
           - id: debian12-amd64-deb
             osLabel: Debian 12
             image: debian:12
@@ -54,16 +47,23 @@ jobs:
             packageType: deb
             packagePattern: metricshub-community_*_amd64.deb
             arch: amd64
-          - id: debian11-arm64-deb
-            osLabel: Debian 11
-            image: debian:11
+          - id: debian13-amd64-deb
+            osLabel: Debian 13
+            image: debian:13
+            platform: linux/amd64
+            packageType: deb
+            packagePattern: metricshub-community_*_amd64.deb
+            arch: amd64
+          - id: debian12-arm64-deb
+            osLabel: Debian 12
+            image: debian:12
             platform: linux/arm64
             packageType: deb
             packagePattern: metricshub-community_*_arm64.deb
             arch: arm64
-          - id: debian12-arm64-deb
-            osLabel: Debian 12
-            image: debian:12
+          - id: debian13-arm64-deb
+            osLabel: Debian 13
+            image: debian:13
             platform: linux/arm64
             packageType: deb
             packagePattern: metricshub-community_*_arm64.deb
@@ -96,16 +96,16 @@ jobs:
             packageType: rpm
             packagePattern: metricshub-community-*.aarch64.rpm
             arch: arm64
-          - id: debian12-amd64-tar
-            osLabel: Debian 12
-            image: debian:12
+          - id: debian13-amd64-tar
+            osLabel: Debian 13
+            image: debian:13
             platform: linux/amd64
             packageType: tar
             packagePattern: metricshub-community-linux-*-x86_64.tar.gz
             arch: amd64
-          - id: debian12-arm64-tar
-            osLabel: Debian 12
-            image: debian:12
+          - id: debian13-arm64-tar
+            osLabel: Debian 13
+            image: debian:13
             platform: linux/arm64
             packageType: tar
             packagePattern: metricshub-community-linux-*-aarch64.tar.gz
